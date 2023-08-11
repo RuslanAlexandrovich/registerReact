@@ -27,7 +27,7 @@ function App() {
         <Row>
           <Col className='wrapper'>
             <Form onSubmit={handleSubmit(onSumbit)} className="form_reg">
-            <h2 className="title_form mb-4">Реєстрація</h2>
+            <h1 className="title_form mb-4">Реєстрація</h1>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label className='App-label'>Ім'я *</Form.Label>
               <Form.Control type="text" placeholder="" {...register("name", {required: true,
@@ -46,10 +46,10 @@ function App() {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label className='App-label'>Пошта *</Form.Label>
-              <Form.Control type="email" placeholder="" {...register("email", {required: true,
+              <Form.Control type="email" placeholder="Email@email.ua" {...register("email", {required: true,
                     pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i})} />
               <Form.Text className="text-muted" >
-              Приклад: Email@email.ua
+              
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -62,12 +62,12 @@ function App() {
                 )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label className='App-label'>Пароль</Form.Label>
+              <Form.Label className='App-label'>Пароль *</Form.Label>
               <Form.Control type={showPassword ? "text" : "password"} id="password" placeholder="Пароль має містити не менше 6 символів, 1 велику літеру, 1 цифру." {...register("password", {required: true,
                     pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/})} />
               {errors.password && (
                   <Form.Text className="text-danger">
-                    Пароль має містити не менше 6 символів, 1 велику літеру, 1 цифру, і символи латинського алфавіту.
+                    Пароль має містити не менше 6 символів, 1 велику літеру, 1 цифру, символи латинського алфавіту.
                   </Form.Text>
                 )}
             </Form.Group>

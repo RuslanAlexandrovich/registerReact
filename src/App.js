@@ -27,7 +27,7 @@ function App() {
         <Row>
           <Col className='wrapper'>
             <Form onSubmit={handleSubmit(onSumbit)} className="form_reg">
-            <h2 className="title_form mb-5">Реєстрація</h2>
+            <h2 className="title_form mb-4">Реєстрація</h2>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label className='App-label'>Ім'я *</Form.Label>
               <Form.Control type="text" placeholder="" {...register("name", {required: true,
@@ -62,7 +62,7 @@ function App() {
                 )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Пароль</Form.Label>
+              <Form.Label className='App-label'>Пароль</Form.Label>
               <Form.Control type={showPassword ? "text" : "password"} id="password" placeholder="Пароль має містити не менше 6 символів, 1 велику літеру, 1 цифру." {...register("password", {required: true,
                     pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/})} />
               {errors.password && (
@@ -71,7 +71,7 @@ function App() {
                   </Form.Text>
                 )}
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Group className="mb-4" controlId="formBasicCheckbox">
               <Form.Check type="checkbox"  id="showPass"  label="Видимий пароль" onChange={() => setShowPassword(!showPassword)} />
             </Form.Group>
             <Button type="submit" id="submit">

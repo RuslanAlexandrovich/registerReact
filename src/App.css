@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+
 }
 
 .wrapper {
@@ -23,7 +23,9 @@ form .title_form {
   text-align: center;
 }
 .App-label{
+  width: 100%;
   font-size: 16px;
+  text-align: center!important;
 }
 .form-check{
   display: flex!important;
